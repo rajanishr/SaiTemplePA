@@ -1,9 +1,9 @@
-#appname: SaiTemplePA
-#appid: com.stpa.mapp
-#type: mobile
-#guid: 0be492bd-61c8-4786-8e03-e1d99899cefa
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:Sai Temple PA
+#appid:com.stpa.mapp
+#type:mobile
+#guid:0be492bd-61c8-4786-8e03-e1d99899cefa
+#version:1.0
+#publisher:rrajvanshi
+#url:http://www.saitemplepa.com
+#image:appicon.png
+#desc:not specified

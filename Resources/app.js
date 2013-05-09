@@ -32,9 +32,16 @@ if (Ti.version < 1.8 ) {
 		Window = require('ui/tablet/ApplicationWindow');
 	}
 	else {
-		Window = require('ui/handheld/ApplicationWindow');
+		// Android uses platform-specific properties to create windows.
+		// All other platforms follow a similar UI pattern.
+		if (osname === 'android') {
+			Window = require('ui/handheld/android/ApplicationWindow');
+		}
+		else {
+			Window = require('ui/handheld/ApplicationWindow');
+		}
 	}
 
-	var ApplicationTabGroup = require('ui/common/ApplicationTabGroup');
-	new ApplicationTabGroup(Window).open();
+	var MainNavBar = require('ui/common/MainNavBar');
+	new MainNavBar(Window).open();
 })();
