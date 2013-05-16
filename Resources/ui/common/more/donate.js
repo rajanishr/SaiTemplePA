@@ -5,21 +5,16 @@ function Donate() {
 	
 
 	Ti.App.fireEvent('show_indicator');
-	Titanium.Platform.openURL('https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx');
-	/*
-	var webview = Ti.UI.createWebView();
-	self.add(webview);
-	 
-	var xhr = Ti.Network.createHTTPClient();
-	xhr.open('POST', 'https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx');
-	xhr.onload = function () {
-	    webview.html = this.responseText;
-	};
-	xhr.send({
-	    LinkId: 'ab9feda8-7e88-42e5-9696-730863e9fa0e'
+	// Create a WebView
+	var aWebView = Ti.UI.createWebView({
+		url : 'http://developer.appcelerator.com'
 	});
-	*/
- 
+	aWebView.addEventListener('load', function(e) {
+		Ti.API.info('webview loaded: '+ e.url);
+	});
+	// Add to the parent view.
+	self.add(aWebView);
+
 	return self;
 };
 
